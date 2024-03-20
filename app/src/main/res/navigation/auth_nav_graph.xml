@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/splash_frag">
+
+    <fragment
+        android:id="@+id/splash_frag"
+        android:name="blink.it.clone.Auth.SplashFrag"
+        android:label="fragment_splash_frag"
+        tools:layout="@layout/fragment_splash_frag" >
+        <action
+            android:id="@+id/action_splash_frag_to_signin_frag"
+            app:destination="@id/signin_frag"
+            app:popUpTo="@id/splash_frag"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signin_frag"
+        android:name="blink.it.clone.Auth.SignInFrag"
+        android:label="fragment_signin_frag"
+        tools:layout="@layout/fragment_signin_frag" >
+        <action
+            android:id="@+id/action_signin_frag_to_OTPFrag"
+            app:destination="@id/OTPFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPFrag"
+        android:name="blink.it.clone.Auth.OTPFrag"
+        android:label="fragment_o_t_p"
+        tools:layout="@layout/fragment_o_t_p" />
+</navigation>
